@@ -3,7 +3,7 @@
 include ("conect.php");
 
 
-$sql = "SELECT * FROM perfil_muro_profesor";
+$sql = "SELECT * FROM Perfil_Muro_Profesor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

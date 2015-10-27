@@ -6,14 +6,16 @@
     <script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script>
-       function getMensajesFromBase(respuesta){
+     
+       function getMensajesFromBase(){
             // $('#comentarios').append('<li>' + respuesta.mensaje  + '</li>');
                 $.ajax({
-                    url: "mensajes.php",
+                    //url: "mensajes.php",
+                    url: "muroAlumno.php",
                     type: 'post',
                     data: {},
                     success:function(response){
-                        $('#comentarios').append(response);
+                        $('#comentarios').html(response);
                     },
                     error: function(e){
                     $('#logger').html(e.responseText);
@@ -27,8 +29,8 @@
             var pusher = new Pusher('c48d59c4cb61c7183954');
             var canal  = pusher.subscribe('canalo');
 
-            canal.bind('nuevo_comentario', function(respuesta){
-                getMensajesFromBase(respuesta);
+            canal.bind('nuevo_comentario', function(){
+                getMensajesFromBase();
                
             });
 
@@ -40,6 +42,18 @@
                 return false;
             });
         });
+        
+     function load() {
+       var loadedWindow = 0;
+          debugger;
+          if (loadedWindow == 0) {
+            getMensajesFromBase();
+            loadedWindow = 1;
+          }
+                  
+      }
+      window.onload = load;  
+        
     </script>
 </head>
 <body>

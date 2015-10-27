@@ -5,6 +5,21 @@
     <title>JV Software | Tutorial 11</title>
     <script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    
+  <!--
+  
+    1- hacer una busqueda por cada actividad que corresponde al id de la persona que esta logueada y partir de ahi mostrar los posts de cada
+    muro  
+    2- 
+  
+  
+  
+  
+  -->
+  
+    
+    
+    
     <script>
         $(function(){
 
@@ -22,7 +37,7 @@
                     type: 'post',
                     data: { input_mensaje: $('#input_mensaje').val() },
                     success:function(response){
-                        alert( "Data Saved: " + response );
+                        //alert( "Data Saved: " + response );
                     },
                     error: function(e){
                     $('#logger').html(e.responseText);
