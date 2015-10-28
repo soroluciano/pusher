@@ -16,10 +16,7 @@
   
   
   -->
-  
-    
-    
-    
+
     <script>
         $(function(){
 

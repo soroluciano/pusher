@@ -5,6 +5,8 @@
     <title>JV Software | Tutorial 11</title>
     <script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+    <script src="js/jquery.infinitescroll.js"></script>
     <script>
      
        function getMensajesFromBase(){
@@ -43,17 +45,6 @@
             });
         });
         
-     function load() {
-       var loadedWindow = 0;
-          debugger;
-          if (loadedWindow == 0) {
-            getMensajesFromBase();
-            loadedWindow = 1;
-          }
-                  
-      }
-      window.onload = load;  
-        
     </script>
 </head>
 <body>
@@ -63,5 +54,6 @@
     <ul id="comentarios">
         <!-- Comentarios aqui! -->
     </ul>
+    <div id="more"><span>Mas comentarios</span></div>
 </body>
 </html>

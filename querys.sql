@@ -18,3 +18,4 @@ where usu.id_usuario = 5
 select res.respuesta from Respuesta res
 left join Perfil_Muro_Profesor pm
 on res.id_posteo = pm.id_posteo
+where pm.id_posteo = ?

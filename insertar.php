@@ -2,7 +2,7 @@
 
 include ("conect.php");
 //$id_actividad = $_POST['idactividad'];
-$id_actividad = 1;
+$id_actividad = 3;
 $mensaje = $_POST['input_mensaje'];
 $pepe = "pep";
 $sql = "INSERT INTO Perfil_Muro_Profesor(posteo,id_actividad,cusuario) VALUES('$mensaje','$id_actividad','$pepe')";
