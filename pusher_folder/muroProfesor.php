@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 ?>
 
 
-<div class="container">
+
     <div class="col-sm-8">
         <div class="panel panel-white post panel-shadow">
 
@@ -119,7 +119,7 @@ if ($result->num_rows > 0) {
                 $conn->close();
             ?>
 
-        </div>
+        <!--</div>-->
     </div>
 </div>
 
