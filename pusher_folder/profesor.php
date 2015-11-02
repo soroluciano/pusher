@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>JV Software | Tutorial 11</title>
+    <title>DoFit Muro</title>
     <script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript" href="js/bootstrap.min.js"></script>

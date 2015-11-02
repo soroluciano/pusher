@@ -15,8 +15,8 @@ on usu.id_usuario = ac.id_usuario
 inner join Ficha_Usuario fu 
 on fu.id_usuario= usu.id_usuario
 where usu.id_usuario = 5
-order by pmp.fhultmod asc
-limit 0,10
+order by pmp.fhcreacion desc,pmp.fhultmod desc
+
 ";
 
 
@@ -40,30 +40,27 @@ if ($result->num_rows > 0) {
 
 
 
-    <div class="col-sm-8">
-        <div class="panel panel-white post panel-shadow">
-
-            
-            
             <?php
                 $result = $conn->query($query_post_profesor);
                 
                 if ($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
                       echo "
-                      
-                      <div class='post-heading'>
-                      <div class='pull-left image'>
-                      <img src='images/1.jpg' class='img-circle avatar' alt='user profile image'>
-                      </div>
-                      <div class='pull-left meta'>
-                      <div class='title h5'>
-                      <a href='#'><b>".$row["nombre"]." ".$row["apellido"]."</b></a>
-                      made a post.
-                      </div>
-                      <h6 class='text-muted time'>1 minute ago</h6>
-                      </div>
-                      </div>
+                  <div class='col-sm-8'>
+                    <div class='panel panel-white post panel-shadow'>
+                    
+                        <div class='post-heading'>
+                          <div class='pull-left image'>
+                            <img src='images/1.jpg' class='img-circle avatar' alt='user profile image'>
+                          </div>
+                          <div class='pull-left meta'>
+                            <div class='title h5'>
+                              <a href='#'><b>".$row["nombre"]." ".$row["apellido"]."</b></a>
+                              made a post.
+                            </div>
+                            <h6 class='text-muted time'>1 minute ago</h6>
+                          </div>
+                        </div>
                       
                       
                       
@@ -96,21 +93,21 @@ if ($result->num_rows > 0) {
                             while($rowB = $resultB->fetch_assoc()) {
                               echo "
                                   <li class='comment'>
-                                  <a class='pull-left' href='#'>
-                                  <img class='avatar' src='http://bootdey.com/img/Content/user_1.jpg' alt='avatar'>
-                                  </a>
-                                  <div class='comment-body'>
-                                  <div class='comment-heading'>
-                                  <h4 class='user'>Gavino Free</h4>
-                                  <h5 class='time'>5 minutes ago</h5>
-                                  </div>
-                                  <p>".$rowB['respuesta']."</p>
-                                  </div>
+                                    <a class='pull-left' href='#'>
+                                        <img class='avatar' src='http://bootdey.com/img/Content/user_1.jpg' alt='avatar'>
+                                    </a>
+                                      <div class='comment-body'>
+                                          <div class='comment-heading'>
+                                              <h4 class='user'>Gavino Free</h4>
+                                              <h5 class='time'>5 minutes ago</h5>
+                                          </div>
+                                          <p>".$rowB['respuesta']."</p>
+                                      </div>
                                   </li>";
                         
                             }
                         }   
-                        echo "</ul></div>";
+                        echo "</ul></div></div></div>";
                   }
                 }
 
@@ -120,6 +117,5 @@ if ($result->num_rows > 0) {
             ?>
 
         <!--</div>-->
-    </div>
-</div>
+
 
